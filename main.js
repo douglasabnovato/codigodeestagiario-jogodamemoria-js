@@ -59,6 +59,13 @@ cardBoard.innerHTML = cardHTML + cardHTML;
      }, 1000);
  }
 
+ (function shuffle(){
+     cards.forEach( card => {
+         let rand = Math.floor(Math.random() * 12);
+         card.style.order = rand;
+     })
+ })()
+
  function resetCards(isMatch = false){
      if(isMatch){
          firstCard.removeEventListener('clip', flipCard);
