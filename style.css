@@ -22,6 +22,7 @@ body{
     width: calc(25% - 10px);
     height: 33%;   
     margin: 5px; 
+    transform-style: preserve-3d;
     position: relative;
 }
 
@@ -40,4 +41,8 @@ body{
     background: #675a10;
     position: absolute;
     padding: 20px;
+}
+
+.front-face{
+    transform: rotateY(180deg);
 }
