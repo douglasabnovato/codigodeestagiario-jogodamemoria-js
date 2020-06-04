@@ -16,7 +16,7 @@ let cardHTML = '';
 
 images.forEach(img => {
     cardHTML += `
-        <div class="memory-card" data.card="${img}">
+        <div class="memory-card" data-card="${img}">
             <img class="front-face" src="img/${img}">
             <img class="back-face" src="img/js-badge.svg">
         </div>
@@ -55,6 +55,4 @@ cardBoard.innerHTML = cardHTML + cardHTML;
      }, 1000);
  }
  
-     
-
  cards.forEach(card => card.addEventListener('click', flipCard));
