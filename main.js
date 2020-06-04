@@ -47,7 +47,7 @@ cardBoard.innerHTML = cardHTML + cardHTML;
 
  function checkForMatch(){
      let isMatch = firstCard.dataset.card === secondCard.dataset.card;
-     !isMatch ? disableCards(): true;
+     !isMatch ? disableCards(): resetCards();
  }
 
  function disableCards(){
@@ -55,8 +55,16 @@ cardBoard.innerHTML = cardHTML + cardHTML;
      setTimeout(() => { 
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-        [firstCard, secondCard, lockCard] = [null, null, false]
+        resetCards();
      }, 1000);
+ }
+
+ function resetCards(isMatch = false){
+     if(isMatch){
+         firstCard.removeEventListener('clip', flipCard);
+         secondCard.removeEventListener('clip', flipCard);
+     }
+    [firstCard, secondCard, lockCard] = [null, null, false]
  }
  
  cards.forEach(card => card.addEventListener('click', flipCard));
