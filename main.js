@@ -31,4 +31,8 @@ cardBoard.innerHTML = cardHTML + cardHTML;
 
  const cards = document.querySelectorAll(".memory-card");
 
- console.log(cards);
+ function flipCard(){
+     console.log(this);
+ }
+
+ cards.forEach(card => card.addEventListener('click', flipCard));
