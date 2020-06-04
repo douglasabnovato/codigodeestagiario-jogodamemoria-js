@@ -45,6 +45,16 @@ cardBoard.innerHTML = cardHTML + cardHTML;
 
  function checkForMatch(){
      let isMatch = firstCard.dataset.card === secondCard.dataset.card;
+     !isMatch ? disableCards(): true;
  }
+
+ function disableCards(){
+     setTimeout(() => { 
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+     }, 1000);
+ }
+ 
+     
 
  cards.forEach(card => card.addEventListener('click', flipCard));
