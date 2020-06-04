@@ -1,3 +1,6 @@
+/**
+ * Rendização do HTML 
+ */
 const cardBoard = document.querySelector("#cardboard");
 
 const images = [
@@ -13,12 +16,19 @@ let cardHTML = '';
 
 images.forEach(img => {
     cardHTML += `
-        <div>
-            <img src="img/${img}">
-            <img src="img/js-badge.svg">
+        <div class="memory-card">
+            <img class="front-face" src="img/${img}">
+            <img class="back-face" src="img/js-badge.svg">
         </div>
     `
 });
 
-cardBoard.innerHTML = cardHTML;
+cardBoard.innerHTML = cardHTML + cardHTML;
 
+/**
+ * Rendização do HTML - FIM
+ */
+
+ const cards = document.querySelectorAll(".memory-card");
+
+ console.log(cards);
