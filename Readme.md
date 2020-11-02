@@ -20,6 +20,7 @@
 #### Código + Dependências
 
 - git clone "http": ter o projeto na máquina local
+- open with live server
 
 #### Passo a passo do projeto - Frontend 
 
